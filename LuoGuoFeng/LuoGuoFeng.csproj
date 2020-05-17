@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\PumpData.cs" />
     <Compile Include="Data\RWcofing.cs" />
     <Compile Include="Data\XMLer.cs" />
     <Compile Include="Dome\CurrentInfo.cs" />
