@@ -315,7 +315,7 @@ namespace LuoGuoFeng
 
                             double Q = Convert.ToDouble(data[Tsetup, 7]);
                             double time = Convert.ToDouble(data[Tsetup, 8]);
-                            Global.Pumpdata.Calculation(Q, time);
+                            Global.Pumpdata.Calculation(Q, time,Global.A.Position);
                             if (ts != null)
                             {
                                 if (Global.Pumpdata.IsReset)

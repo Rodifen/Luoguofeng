@@ -39,12 +39,12 @@ namespace LuoGuoFeng
             //  MotionHelper.Dispensing();
             var quality = (double)numericUpDown7.Value;
             var time = (double)numericUpDown9.Value;
-            
+            Global.Pumpdata.Calculation(quality, time, Global.A.Position);
             var task = Task.Run(() =>
             {
                 if (label1.Text == "齿轮泵")
                 {
-                    MotionHelper.Dispensing(quality, time);
+                    MotionHelper.Dispensing(Global.Pumpdata);
                    
                 }
                 else

@@ -63,7 +63,10 @@ namespace LuoGuoFeng
 
         public double Position
         {
-            get { return position; }
+           
+            get {
+                GetPosition();
+                return position; }
         }
 
         public bool IsRun

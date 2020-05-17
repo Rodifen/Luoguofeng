@@ -279,7 +279,6 @@ D:\Difen\Project\C#\luo\LuoGuoFeng\obj\Debug\LuoGuoFeng.csproj.CopyComplete
 D:\Difen\Project\C#\luo\LuoGuoFeng\obj\Debug\LuoGuoFeng.exe
 D:\Difen\Project\C#\luo\LuoGuoFeng\obj\Debug\LuoGuoFeng.pdb
 D:\Difen\Project\C#\luo\LuoGuoFeng\obj\Debug\LuoGuoFeng.csprojAssemblyReference.cache
-C:\Users\94934\Desktop\ww\Luoguofeng\LuoGuoFeng\obj\Debug\LuoGuoFeng.csprojAssemblyReference.cache
 C:\Users\94934\Desktop\ww\Luoguofeng\LuoGuoFeng\obj\Debug\LuoGuoFeng.FrmGlobal_Parameters.resources
 C:\Users\94934\Desktop\ww\Luoguofeng\LuoGuoFeng\obj\Debug\LuoGuoFeng.Frm.FrmHome.resources
 C:\Users\94934\Desktop\ww\Luoguofeng\LuoGuoFeng\obj\Debug\LuoGuoFeng.Frm_Log.resources
