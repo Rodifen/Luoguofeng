@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LuoGuoFeng.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,7 +40,10 @@ namespace LuoGuoFeng
         public static double A_ratio;
         public static double B_ratio;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PumpData Pumpdata = new PumpData("data\\pumpdata.ini");
         public static string modelPath = "";   //型号参数路径
         public static string IO_text = BasePath + @"\" + "IO_text.ini";
         //public static string currModel;                                                                     //当前路径

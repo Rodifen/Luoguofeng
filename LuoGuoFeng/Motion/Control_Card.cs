@@ -310,33 +310,43 @@ namespace LuoGuoFeng
                  
                     break;
                 case "Dipensing":
-                    if (!pa.tryRun)      //不带料模式
-                    {
-                        double Q = Convert.ToDouble(data[Tsetup, 7]);
-                        double time = Convert.ToDouble(data[Tsetup, 8]);
-                        if (ts != null)
+                        if (!pa.tryRun)      //不带料模式
                         {
-                            if (!ts.IsCompleted)
+
+                            double Q = Convert.ToDouble(data[Tsetup, 7]);
+                            double time = Convert.ToDouble(data[Tsetup, 8]);
+                            Global.Pumpdata.Calculation(Q, time);
+                            if (ts != null)
+                            {
+                                if (Global.Pumpdata.IsReset)
+                                {
+                                    ReDispensing();
+                                    ts = Task.Run(() =>
+                                    {
+                                        Dispensing(Global.Pumpdata);
+                                    });
+                                }
+                                if (!ts.IsCompleted)
+                                {
+                                    ts.Wait();
+                                }
+                            }
+                            ts = Task.Run(() =>
+                            {
+                                Dispensing(Global.Pumpdata);
+                            });
+                        }
+                        break;
+                    case "Dipensed":
+                        if (!pa.tryRun)
+                        {
+                            if (ts != null)
                             {
                                 ts.Wait();
                             }
                         }
-                        ts = Task.Run(() =>
-                        {
-                            Dispensing(Q, time);
-                        });
-                    }
-                    break;
-                case "Dipensed":
-                    if (!pa.tryRun)
-                    {
-                        if (ts != null)
-                        {
-                             ts.Wait();
-                        }
-                   }
-                    break;
-                case "ReDispensing":
+                        break;
+                    case "ReDispensing":
                         if (!pa.tryRun)
                         {
                             if (!ts.IsCompleted)
@@ -511,26 +521,10 @@ namespace LuoGuoFeng
         }
 
 
-        public static bool Dispensing(double quality, double time)
+        public static bool Dispensing(PumpData pumpData )
         {
-            //0
-            double V = quality / (double)PumpFile.Default.A3;
-
-            double H = V / ((double)PumpFile.Default.A4 * (double)PumpFile.Default.A4 * 3.14);
-
-            double M = H * (double)PumpFile.Default.A2 * (double)PumpFile.Default.A1;
-
-            // double Tdist = M;
-            double speed = (M / time) * 1000;
-            if (M > (double)PumpFile.Default.A0)
-            {
-                return false;
-            }
-            var resr = (Global.A.GetPosition() + M) > (double)PumpFile.Default.A0;
-            if (resr)
-            {
-                ReDispensing();
-            }
+                      
+         
             //1.关入胶阀
             var res = cylinder(0, -1, 0);
             if (!res)
@@ -558,7 +552,9 @@ namespace LuoGuoFeng
 
             Thread.Sleep(100);
             // 3.出胶
-
+            var M =  pumpData.Out_M;
+            var speed =  pumpData.Speed;
+            var time = pumpData.Time;
             PumpMotion(M, speed,time);
 
 
@@ -597,7 +593,7 @@ namespace LuoGuoFeng
                 return false;
             }
 
-            Thread.Sleep(100);
+         //   Thread.Sleep(100);
 
             // 2.出胶
             Global.A.Vmove(1,1000,0);
@@ -718,7 +714,12 @@ namespace LuoGuoFeng
                     TimeNum++;
                 }
                 if (TimeNum >= TimeOut)
+                {
+                    
+                    Global.frmMain.PushMess("Dipensing time out.");
                     return false;
+                }
+                 
                 return true;
             }
             catch (Exception ex)
