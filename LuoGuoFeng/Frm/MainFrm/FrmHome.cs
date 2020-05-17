@@ -136,17 +136,8 @@ namespace LuoGuoFeng.Frm
                         {
                             continue;
                         }
-                        if (array[i, 1] == "Arc_Mid")
-                        {
-                            PushMesss(i + " line" + array[i, 1] + " " + array[i, 2] + " " + array[i, 3] + " " + array[i, 4] );
-                            int y = i+1;
-                            PushMesss(y.ToString() + " line " + array[y, 1] + " " + array[i + 1, 2] + " " + array[i + 1, 3] + " " + array[i + 1, 4]);
-
-                        }
-                        else
-                        {
-                            PushMesss(i + " line " + array[i, 1] + " " + array[i, 2] + " " + array[i, 3] + " " + array[i, 4]);
-                        }
+                         var mess = Getmess(array,i);
+                         PushMesss(mess);
                         Thread.Sleep(100);
                      
                         Global.Cdefault data1 = new Global.Cdefault();
@@ -179,6 +170,48 @@ namespace LuoGuoFeng.Frm
                
             }
         }
+
+       string   Getmess(string[,] arr,int i)
+        {
+            string resual = string.Empty;
+
+            switch (arr[i, 1])
+            {
+                case "Disabled":
+                    resual = i + " line " + arr[i, 1] + "-------";
+                    break;
+                case "Point":
+                    resual = i + " line " + arr[i, 1] + "  " + arr[i, 2] + "  " + arr[i, 3] + "  " + arr[i, 4];
+                    break;
+                case "Wait":
+                    resual = i + " line " + arr [i,1]+"  "+arr[i,9];
+                    break;
+                case "Line":
+                    resual = i + " line " + arr[i, 1]+"  " + arr[i, 2] +"  "+ arr[i, 3]+"  "+arr[i,4];
+                    break;
+                case "Arc_Mid":
+                    resual = i + " line " + arr[i, 1] + "  " + arr[i, 2] + "  " + arr[i, 3] + "  " + arr[i, 4];
+                    resual += "\r\t\t" + i + " line " + arr[i + 1, 1] +"  "+ arr[1 + i, 2] +"  "+ arr[i + 1, 3] + "  " + arr[i + 1, 4];
+                    break;
+                case "Dipensing":
+                    resual = i + " line " + arr[i, 1] +"  "+ arr[i, 7] +"  "+ arr[i, 8];
+                    break;
+                case "Dipensed":
+                    resual = i + " line " + arr[i, 1];
+                    break;
+                case "ReDispensing":
+                    resual = i + " line " + arr[i, 1];
+                    break;
+                default:
+                    break;
+
+            }
+            resual += "  "+ arr[i, 10];
+
+            return resual;
+        }
+
+
         private void ucTextBoxexMess(decimal str)
         {
 

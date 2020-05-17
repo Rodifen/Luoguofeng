@@ -312,7 +312,6 @@ namespace LuoGuoFeng
                 case "Dipensing":
                         if (!pa.tryRun)      //不带料模式
                         {
-
                             double Q = Convert.ToDouble(data[Tsetup, 7]);
                             double time = Convert.ToDouble(data[Tsetup, 8]);
                             Global.Pumpdata.Calculation(Q, time,Global.A.Position);
@@ -329,6 +328,7 @@ namespace LuoGuoFeng
                                 if (!ts.IsCompleted)
                                 {
                                     ts.Wait();
+                                    Dispensing(Global.Pumpdata);
                                 }
                             }
                             ts = Task.Run(() =>
@@ -570,9 +570,6 @@ namespace LuoGuoFeng
             {
                 return false;
             }
-
-
-
 
 
             return true;

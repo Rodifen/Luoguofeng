@@ -22,7 +22,12 @@ namespace LuoGuoFeng
         UserHelper userHelper = new UserHelper("");
         List<User> listUser = new List<User>();
 
-        
+
+        FrmManual frmManual = new FrmManual();
+        Frm_Log frm_Log = new Frm_Log();
+        FrmHome frmHome = new FrmHome();
+        FrmSet frmSet = new FrmSet();
+        FrmGlobal_Parameters frmGlobal_Parameters = new FrmGlobal_Parameters();
 
 
 
@@ -43,8 +48,8 @@ namespace LuoGuoFeng
             {
                 Global.Ccard1.exies = true;
                 rich_Mess.AppendText(DateTime.Now.ToString("HH:mm:ss :") + "read Card success");
-              
-           
+
+                Global.Pumpdata.Read();
                 ReadCardData(100);
                 Global.X.read();
                 Global.Y.read();
@@ -111,37 +116,35 @@ namespace LuoGuoFeng
 
         }
 
+     
         private void btnManual_Click(object sender, EventArgs e)
         {
             
-         
-                openForm(new FrmManual());
+                openForm(frmManual);
                 showBar(btnManual);
-            
-
         }
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            openForm(new Frm_Log());
+            openForm(frm_Log);
             showBar(btnLog);
         }
 
         private void btnSet_Click(object sender, EventArgs e)
         {
-            openForm(new FrmSet());
+            openForm(frmSet);
             showBar(btnSet);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            openForm(new FrmHome());
+            openForm(frmHome);
             showBar(btnHome);
         }
 
         private void btnParameter_Click(object sender, EventArgs e)
         {
-            openForm(new FrmGlobal_Parameters());
+            openForm(frmGlobal_Parameters);
             showBar(btnParameter);
         }
 
