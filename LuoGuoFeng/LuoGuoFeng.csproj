@@ -265,11 +265,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Data\PumpFile.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>PumpFile.settings</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Frm\MainFrm\FrmGlobal_Parameters.resx">
       <DependentUpon>FrmGlobal_Parameters.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,10 +362,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Data\PumpFile.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>PumpFile.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\主页 %283%29.png" />

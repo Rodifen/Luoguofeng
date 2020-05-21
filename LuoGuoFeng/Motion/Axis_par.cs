@@ -156,7 +156,9 @@ namespace LuoGuoFeng
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+
+                Global.frmMain.PushMess(ex.ToString());
+           //     MessageBox.Show(ex.Message);
                
             }
             //XXXXXXXXXXXXX
@@ -478,40 +480,28 @@ namespace LuoGuoFeng
         public void ReadPumpA()
         {
             Global.Pumpdata.Read();
+            comboBox1.Text = Global.Pumpdata.Type;
+            comboBox2.Text = Global.Pumpdata.AxisNum;
             numericUpDown60.Value = (decimal)Global.Pumpdata.MaxStrke;
             numericUpDown61.Value = (decimal)Global.Pumpdata.Pitch;
             numericUpDown62.Value = (decimal)Global.Pumpdata.Reduction_ratio;
             numericUpDown63.Value = (decimal)Global.Pumpdata.Density;
             numericUpDown64.Value = (decimal)Global.Pumpdata.Radius;
              
-            //    // Properties.Settings.Default.
-            //numericUpDown60.Value = PumpFile.Default.A0;
-            //numericUpDown61.Value = PumpFile.Default.A1;
-            //numericUpDown62.Value = PumpFile.Default.A2;
-            //numericUpDown63.Value = PumpFile.Default.A3;
-            //numericUpDown64.Value = PumpFile.Default.A4;
-            //comboBox1.Text = PumpFile.Default.PubpType;
+          
         }
 
         public void   WritePumpA()
         {
-            //settings.A_FullStroke = numericUpDown60.Value;
-            //settings.A_Pitch = numericUpDown61.Value;
-            //settings.A_Reduction = numericUpDown62.Value;
-            //settings.A_density = numericUpDown63.Value;
-           Global.Pumpdata.MaxStrke = (double)numericUpDown60.Value;
-           Global.Pumpdata.Pitch = (double)numericUpDown61.Value;
-           Global.Pumpdata.Reduction_ratio = (double)numericUpDown62.Value;
-           Global.Pumpdata.Density = (double)numericUpDown63.Value;
-           Global.Pumpdata.Radius = (double)numericUpDown64.Value;
+            Global.Pumpdata.Type = comboBox1.Text;
+            Global.Pumpdata.AxisNum = comboBox2.Text;
+            Global.Pumpdata.MaxStrke = (double)numericUpDown60.Value;
+            Global.Pumpdata.Pitch = (double)numericUpDown61.Value;
+            Global.Pumpdata.Reduction_ratio = (double)numericUpDown62.Value;
+            Global.Pumpdata.Density = (double)numericUpDown63.Value;
+            Global.Pumpdata.Radius = (double)numericUpDown64.Value;
             Global.Pumpdata.Write();
-           
-             //PumpFile.Default.A1 = numericUpDown61.Value;
-             //PumpFile.Default.A2 = numericUpDown62.Value;
-             //PumpFile.Default.A3 = numericUpDown63.Value;
-             //PumpFile.Default.A4 = numericUpDown64.Value;
-             //PumpFile.Default.PubpType = comboBox1.Text;
-             //PumpFile.Default.Save();
+          
         }
 
 

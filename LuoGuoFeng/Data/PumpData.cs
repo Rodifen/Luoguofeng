@@ -26,11 +26,34 @@ namespace LuoGuoFeng.Data
             filePath = Tfilepath;
         }
 
-        enum type
+
+
+
+ //enum type
+        //{
+        //    // Volumetric piston dispensers – from low viscosity to high viscosity and abrasive，体积式活塞注胶头
+        //    // Gear pump dispensers – for continuous dispensing 齿轮泵注胶头
+        //}
+
+
+        #region Variable
+
+        /// <summary>
+        ///  pumpTrpe
+        /// </summary>
+        string _type;
+
+      /// <summary>
+      /// 轴数
+      /// </summary>
+        private string _AxisNum;
+        public string AxisNum
         {
-            // Volumetric piston dispensers – from low viscosity to high viscosity and abrasive，体积式活塞注胶头
-            // Gear pump dispensers – for continuous dispensing 齿轮泵注胶头
+            get { return _AxisNum; }
+            set { _AxisNum = value; }
         }
+        
+       
         /// <summary>
         /// 减速比
         /// </summary>
@@ -56,7 +79,7 @@ namespace LuoGuoFeng.Data
         /// </summary>
         double pitch = 0;
 
-
+        #endregion
 
         double out_M = 0;
         double out_time = 0;
@@ -118,6 +141,12 @@ namespace LuoGuoFeng.Data
         {
             get { return curPos; }
             set { curPos = value; }
+        }
+
+        public string Type
+        {
+            get { return _type; }
+            set { _type = value; }
         }
         #endregion
 

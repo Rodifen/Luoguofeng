@@ -199,7 +199,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label123 = new System.Windows.Forms.Label();
             this.label119 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
             this.label118 = new System.Windows.Forms.Label();
             this.label114 = new System.Windows.Forms.Label();
             this.label121 = new System.Windows.Forms.Label();
@@ -259,12 +258,14 @@
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.ucTextBoxEx1 = new HZH_Controls.Controls.UCTextBoxEx();
             this.SaveAs_Cal_button = new System.Windows.Forms.Button();
             this.Open_Cal_Button = new System.Windows.Forms.Button();
             this.save_Cal_button = new System.Windows.Forms.Button();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.label116 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -328,7 +329,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown38)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2434,7 +2434,10 @@
             // 
             this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.Controls.Add(this.panel1);
+            this.tabPage4.Controls.Add(this.comboBox2);
             this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.label124);
+            this.tabPage4.Controls.Add(this.label125);
             this.tabPage4.Controls.Add(this.label108);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
@@ -2448,7 +2451,6 @@
             // 
             this.panel2.Controls.Add(this.label123);
             this.panel2.Controls.Add(this.label119);
-            this.panel2.Controls.Add(this.label111);
             this.panel2.Controls.Add(this.label118);
             this.panel2.Controls.Add(this.label114);
             this.panel2.Controls.Add(this.label121);
@@ -2484,15 +2486,6 @@
             this.label119.Size = new System.Drawing.Size(49, 14);
             this.label119.TabIndex = 1;
             this.label119.Text = "密度：";
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(157, 33);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(28, 14);
-            this.label111.TabIndex = 0;
-            this.label111.Text = "A泵";
             // 
             // label118
             // 
@@ -3169,7 +3162,6 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.ucTextBoxEx1);
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -3177,47 +3169,6 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // ucTextBoxEx1
-            // 
-            this.ucTextBoxEx1.BackColor = System.Drawing.Color.Transparent;
-            this.ucTextBoxEx1.ConerRadius = 5;
-            this.ucTextBoxEx1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ucTextBoxEx1.DecLength = 2;
-            this.ucTextBoxEx1.FillColor = System.Drawing.Color.Empty;
-            this.ucTextBoxEx1.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
-            this.ucTextBoxEx1.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ucTextBoxEx1.InputText = "数字键盘";
-            this.ucTextBoxEx1.InputType = HZH_Controls.TextInputType.NotControl;
-            this.ucTextBoxEx1.IsFocusColor = true;
-            this.ucTextBoxEx1.IsRadius = true;
-            this.ucTextBoxEx1.IsShowClearBtn = true;
-            this.ucTextBoxEx1.IsShowKeyboard = false;
-            this.ucTextBoxEx1.IsShowRect = true;
-            this.ucTextBoxEx1.IsShowSearchBtn = false;
-            this.ucTextBoxEx1.KeyBoardType = HZH_Controls.Controls.KeyBoardType.UCKeyBorderNum;
-            this.ucTextBoxEx1.Location = new System.Drawing.Point(120, 169);
-            this.ucTextBoxEx1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucTextBoxEx1.MaxValue = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.ucTextBoxEx1.MinValue = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            -2147483648});
-            this.ucTextBoxEx1.Name = "ucTextBoxEx1";
-            this.ucTextBoxEx1.Padding = new System.Windows.Forms.Padding(5);
-            this.ucTextBoxEx1.PromptColor = System.Drawing.Color.Gray;
-            this.ucTextBoxEx1.PromptFont = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ucTextBoxEx1.PromptText = "";
-            this.ucTextBoxEx1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.ucTextBoxEx1.RectWidth = 1;
-            this.ucTextBoxEx1.RegexPattern = "";
-            this.ucTextBoxEx1.Size = new System.Drawing.Size(195, 42);
-            this.ucTextBoxEx1.TabIndex = 3;
             // 
             // SaveAs_Cal_button
             // 
@@ -3281,6 +3232,37 @@
             this.label116.Size = new System.Drawing.Size(117, 33);
             this.label116.TabIndex = 48;
             this.label116.Text = "型号：";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "单轴",
+            "双轴"});
+            this.comboBox2.Location = new System.Drawing.Point(548, 32);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(109, 22);
+            this.comboBox2.TabIndex = 47;
+            this.comboBox2.Text = "单轴";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(289, 40);
+            this.label124.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(0, 14);
+            this.label124.TabIndex = 0;
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(486, 35);
+            this.label125.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(49, 14);
+            this.label125.TabIndex = 0;
+            this.label125.Text = "轴数：";
             // 
             // Axis_par
             // 
@@ -3375,7 +3357,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown38)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3600,7 +3581,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown41;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label114;
         private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Panel panel1;
@@ -3618,6 +3598,8 @@
         private System.Windows.Forms.Label label123;
         private System.Windows.Forms.NumericUpDown numericUpDown64;
         private System.Windows.Forms.TabPage tabPage5;
-        private HZH_Controls.Controls.UCTextBoxEx ucTextBoxEx1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label125;
     }
 }
