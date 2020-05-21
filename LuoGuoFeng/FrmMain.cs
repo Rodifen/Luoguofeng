@@ -43,7 +43,7 @@ namespace LuoGuoFeng
             openForm(new FrmHome());
             showBar(btnHome);
             Global.frmMain = this;
-            var resual =   Global.Ccard1.CarInitial();
+            var resual = Global.Ccard1.CarInitial();
             if (resual)
             {
                 Global.Ccard1.exies = true;
@@ -489,6 +489,11 @@ namespace LuoGuoFeng
             };
         }
         #endregion
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ModelsHelper.NowModels = lab_Now_model.Text;
+        }
 
       
 

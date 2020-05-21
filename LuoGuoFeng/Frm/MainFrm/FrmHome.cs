@@ -109,7 +109,7 @@ namespace LuoGuoFeng.Frm
 
         public void auto()
         {
-            NowModel = PumpFile.Default.Nowmodel;
+            NowModel = ModelsHelper.NowModels;
             string[,] array = new string[100, 20];
             string file = Application.StartupPath + "\\data\\" + NowModel;
             if (!File.Exists(file))

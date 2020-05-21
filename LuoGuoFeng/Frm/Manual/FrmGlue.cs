@@ -18,7 +18,7 @@ namespace LuoGuoFeng
         {
             InitializeComponent();
             // CheckForIllegalCrossThreadCalls = false;
-            label1.Text = PumpFile.Default.PubpType;
+            label1.Text = ModelsHelper.NowModels;
 
             if (label1.Text == "齿轮泵")
             {

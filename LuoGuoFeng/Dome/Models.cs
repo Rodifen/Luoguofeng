@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,19 @@ namespace LuoGuoFeng
     {
         public string FileName{set; get; }
 
-  //      public string FileNub { set; get; }
+  //public string FileNub { set; get; }
     }
 
     class ModelsHelper
     {
+
+
+        [DllImport("kernel32")]
+        private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
+        [DllImport("kernel32")]
+        private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
+
+
           
         private string filePath = string.Empty;
         public ModelsHelper(string Path)
@@ -149,6 +158,50 @@ namespace LuoGuoFeng
             return false;
 
         }
+
+
+
+        private static string _NowModel;
+
+        public static string NowModels
+        {
+            get
+            {
+                ReadNowModel("now.ini");
+                return _NowModel;
+            }
+            set
+            {
+                _NowModel = value;
+                SaveNowModel("now.ini");
+            }
+        }
+        
+
+        
+        
+
+        public  static void ReadNowModel(string filepath)
+        {
+            StringBuilder temp = new StringBuilder();
+            GetPrivateProfileString("model", "", "Now", temp, 255, filepath);
+            _NowModel = temp.ToString();
+        }
+
+        /// <summary>
+        /// 存储ini
+        /// </summary>
+        /// <param name="group">数据分组</param>
+        /// <param name="key">关键字</param>
+        /// <param name="value">关键字对应的值</param>
+        /// <param name="filepath">ini文件地址</param>
+       public   static void SaveNowModel(string filepath)
+        {
+
+            WritePrivateProfileString("model", "Now", _NowModel, filepath);
+        }
+
+
 
         #region outtime
 		 

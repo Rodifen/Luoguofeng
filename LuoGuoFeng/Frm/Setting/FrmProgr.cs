@@ -66,9 +66,9 @@ namespace LuoGuoFeng
              int a = dataGridView1.CurrentCellAddress.Y;
             string NowModel = dataGridView1.Rows[a].Cells[0].Value as string;
             Global.NowModel = new Models();
-            Global.NowModel.FileName  = label2.Text = Global.frmMain.label12 .Text= NowModel;
-            PumpFile.Default.Nowmodel = NowModel;
-            PumpFile.Default.Save();
+            Global.NowModel.FileName  = label2.Text = Global.frmMain.lab_Now_model .Text= NowModel;
+           ModelsHelper.NowModels =  NowModel;
+         
         }
 
         public void Getlist()

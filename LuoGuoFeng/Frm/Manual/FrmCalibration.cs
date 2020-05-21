@@ -20,17 +20,17 @@ namespace LuoGuoFeng
             addxyz(dataGridView1);
             addxyz(dataGridView2);
 
-            string CalPath = Application.StartupPath+"\\data\\"+PumpFile.Default.Nowmodel+"-cal.txt";         // string CalPath =$" {Application.StartupPath} //";
-            var res =   ProfileHelper.ReadCal(CalPath, ref dataGridView1, ref dataGridView2);
+            string CalPath = Application.StartupPath + "\\data\\" + ModelsHelper.NowModels + "-cal.txt";         // string CalPath =$" {Application.StartupPath} //";
+            var res = ProfileHelper.ReadCal(CalPath, ref dataGridView1, ref dataGridView2);
             if (!res)
             {
-               // Global.frmMain.PushMess($"{CalPath} not find");
+                // Global.frmMain.PushMess($"{CalPath} not find");
             }
         }
         #region TopButton
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string CalPath = Application.StartupPath + "\\data\\" + PumpFile.Default.Nowmodel + "-cal.txt";         // string CalPath =$" {Application.StartupPath} //";
+            string CalPath = Application.StartupPath + "\\data\\" + ModelsHelper.NowModels + "-cal.txt";         // string CalPath =$" {Application.StartupPath} //";
             var s = ProfileHelper.WriteCal(dataGridView1, dataGridView2, CalPath); ;
         }
 

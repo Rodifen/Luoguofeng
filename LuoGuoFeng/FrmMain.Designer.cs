@@ -63,7 +63,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lab_Now_model = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -196,7 +196,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1026, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 24);
+            this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
             // 
@@ -206,7 +206,7 @@
             this.Xcur_textBox.Location = new System.Drawing.Point(72, 88);
             this.Xcur_textBox.Name = "Xcur_textBox";
             this.Xcur_textBox.ReadOnly = true;
-            this.Xcur_textBox.Size = new System.Drawing.Size(127, 35);
+            this.Xcur_textBox.Size = new System.Drawing.Size(127, 29);
             this.Xcur_textBox.TabIndex = 5;
             // 
             // Ycur_textBox
@@ -215,7 +215,7 @@
             this.Ycur_textBox.Location = new System.Drawing.Point(72, 130);
             this.Ycur_textBox.Name = "Ycur_textBox";
             this.Ycur_textBox.ReadOnly = true;
-            this.Ycur_textBox.Size = new System.Drawing.Size(127, 35);
+            this.Ycur_textBox.Size = new System.Drawing.Size(127, 29);
             this.Ycur_textBox.TabIndex = 5;
             // 
             // Zcur_textBox
@@ -224,14 +224,14 @@
             this.Zcur_textBox.Location = new System.Drawing.Point(72, 172);
             this.Zcur_textBox.Name = "Zcur_textBox";
             this.Zcur_textBox.ReadOnly = true;
-            this.Zcur_textBox.Size = new System.Drawing.Size(127, 35);
+            this.Zcur_textBox.Size = new System.Drawing.Size(127, 29);
             this.Zcur_textBox.TabIndex = 5;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(13, 16);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 35);
+            this.textBox4.Size = new System.Drawing.Size(212, 29);
             this.textBox4.TabIndex = 5;
             // 
             // label1
@@ -239,7 +239,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(35, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 24);
+            this.label1.Size = new System.Drawing.Size(31, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "X:";
             // 
@@ -248,7 +248,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(35, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 24);
+            this.label3.Size = new System.Drawing.Size(31, 19);
             this.label3.TabIndex = 6;
             this.label3.Text = "Y:";
             // 
@@ -257,7 +257,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(35, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 24);
+            this.label4.Size = new System.Drawing.Size(31, 19);
             this.label4.TabIndex = 6;
             this.label4.Text = "Z:";
             // 
@@ -277,7 +277,7 @@
             this.lb_AlarmInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lb_AlarmInfo.Location = new System.Drawing.Point(3, 7);
             this.lb_AlarmInfo.Name = "lb_AlarmInfo";
-            this.lb_AlarmInfo.Size = new System.Drawing.Size(92, 27);
+            this.lb_AlarmInfo.Size = new System.Drawing.Size(74, 21);
             this.lb_AlarmInfo.TabIndex = 32;
             this.lb_AlarmInfo.Text = "报警信息";
             // 
@@ -287,7 +287,7 @@
             this.Acur_textBox.Location = new System.Drawing.Point(72, 214);
             this.Acur_textBox.Name = "Acur_textBox";
             this.Acur_textBox.ReadOnly = true;
-            this.Acur_textBox.Size = new System.Drawing.Size(127, 35);
+            this.Acur_textBox.Size = new System.Drawing.Size(127, 29);
             this.Acur_textBox.TabIndex = 5;
             // 
             // label5
@@ -295,7 +295,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(35, 217);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 24);
+            this.label5.Size = new System.Drawing.Size(31, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "A:";
             // 
@@ -305,7 +305,7 @@
             this.Bcur_textBox.Location = new System.Drawing.Point(72, 256);
             this.Bcur_textBox.Name = "Bcur_textBox";
             this.Bcur_textBox.ReadOnly = true;
-            this.Bcur_textBox.Size = new System.Drawing.Size(127, 35);
+            this.Bcur_textBox.Size = new System.Drawing.Size(127, 29);
             this.Bcur_textBox.TabIndex = 5;
             // 
             // label6
@@ -313,7 +313,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(35, 258);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 24);
+            this.label6.Size = new System.Drawing.Size(31, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "B:";
             // 
@@ -322,7 +322,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(25, 57);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 24);
+            this.label7.Size = new System.Drawing.Size(97, 19);
             this.label7.TabIndex = 6;
             this.label7.Text = "CurrPos:";
             // 
@@ -357,7 +357,7 @@
             this.textBox8.Location = new System.Drawing.Point(143, 337);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(91, 35);
+            this.textBox8.Size = new System.Drawing.Size(91, 29);
             this.textBox8.TabIndex = 5;
             // 
             // rich_Mess
@@ -373,7 +373,7 @@
             this.textBox7.Location = new System.Drawing.Point(13, 339);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(91, 35);
+            this.textBox7.Size = new System.Drawing.Size(91, 29);
             this.textBox7.TabIndex = 5;
             // 
             // label10
@@ -381,7 +381,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(139, 312);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 24);
+            this.label10.Size = new System.Drawing.Size(71, 19);
             this.label10.TabIndex = 6;
             this.label10.Text = "压力B:";
             // 
@@ -390,7 +390,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 312);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 24);
+            this.label9.Size = new System.Drawing.Size(71, 19);
             this.label9.TabIndex = 6;
             this.label9.Text = "压力A:";
             // 
@@ -399,7 +399,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(958, 53);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 24);
+            this.label8.Size = new System.Drawing.Size(64, 19);
             this.label8.TabIndex = 4;
             this.label8.Text = "User:";
             // 
@@ -419,29 +419,29 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(958, 81);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 24);
+            this.label11.Size = new System.Drawing.Size(75, 19);
             this.label11.TabIndex = 4;
             this.label11.Text = "Model:";
             // 
-            // label12
+            // lab_Now_model
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1030, 81);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 24);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Model";
+            this.lab_Now_model.AutoSize = true;
+            this.lab_Now_model.Location = new System.Drawing.Point(1030, 81);
+            this.lab_Now_model.Name = "lab_Now_model";
+            this.lab_Now_model.Size = new System.Drawing.Size(64, 19);
+            this.lab_Now_model.TabIndex = 4;
+            this.lab_Now_model.Text = "Model";
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 900);
             this.Controls.Add(this.panel_Main);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lab_Now_model);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
@@ -452,6 +452,7 @@
             this.Name = "FrmMain";
             this.Padding = new System.Windows.Forms.Padding(20, 120, 20, 20);
             this.Text = "工控系统";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -500,7 +501,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ToolTip toolTip1;
-        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label lab_Now_model;
     }
 }
 

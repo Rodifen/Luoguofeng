@@ -682,12 +682,12 @@ namespace LuoGuoFeng
             #endregion
 
             #region  8.伺服反转启用
-            if (PumpFile.Default.CCW)
-            {
-                 Global.A.Pmove(-0.1, 5000, 0.1, 1);
-                 while (Global.A.IsRun)
-                        Thread.Sleep(1); 
-            }
+            //if (PumpFile.Default.CCW)
+            //{
+            //     Global.A.Pmove(-0.1, 5000, 0.1, 1);
+            //     while (Global.A.IsRun)
+            //            Thread.Sleep(1); 
+            //}
         
             #endregion
 
@@ -726,37 +726,37 @@ namespace LuoGuoFeng
                 return false;
             }
         } 
-        public static bool PumpMotionA(double quality, double time)
-        {
-            try
-            {
-                int TimeNum = 0;
-                int TimeOut = (int)(time * 2000);
-                double V = quality / (double)PumpFile.Default.A3;
+        //public static bool PumpMotionA(double quality, double time)
+        //{
+        //    try
+        //    {
+        //        int TimeNum = 0;
+        //        int TimeOut = (int)(time * 2000);
+        //        double V = quality / (double)PumpFile.Default.A3;
 
-                double H = V / ((double)PumpFile.Default.A4 * (double)PumpFile.Default.A4 * 3.14);
+        //        double H = V / ((double)PumpFile.Default.A4 * (double)PumpFile.Default.A4 * 3.14);
 
-                double M = H * (double)PumpFile.Default.A2 * (double)PumpFile.Default.A1;
+        //        double M = H * (double)PumpFile.Default.A2 * (double)PumpFile.Default.A1;
+               
+        //        // double Tdist = M;
+        //        double speed = M / time;
+        //        Global.A.Pmove(M, speed, speed, 1);
+        //        while (Global.A.IsRun | TimeNum >= TimeOut)
+        //        {
+        //            Thread.Sleep(1);
+        //            TimeNum++;
+        //        }
+        //        if (TimeNum >= TimeOut)
+        //            return false;
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                // double Tdist = M;
-                double speed = M / time;
-                Global.A.Pmove(M, speed, speed, 1);
-                while (Global.A.IsRun | TimeNum >= TimeOut)
-                {
-                    Thread.Sleep(1);
-                    TimeNum++;
-                }
-                if (TimeNum >= TimeOut)
-                    return false;
-                return true;
-            }
-            catch (Exception ex)
-            {
-
-                //throw;
-                return false;
-            }
-        }
+        //        //throw;
+        //        return false;
+        //    }
+        //}
         #endregion
 
         #region Reset Funtiom
